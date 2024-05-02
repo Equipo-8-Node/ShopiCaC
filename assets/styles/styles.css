@@ -1,0 +1,49 @@
+/* Importaciones */
+@import url(./theme.css);
+
+:root {
+  --accent-100: #ff4d4d;
+  --accent-200: #ffecda;
+}
+
+/* Normalizacion */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-blur {
+  /* filter: blur(5px);  */
+  backdrop-filter: blur(10px);
+}
+
+.btn-width {
+  width: 100px;
+}
+
+/* nav */
+
+.barra-navegacion {
+  padding: 10px;
+  text-align: end;
+  margin-left: auto;
+
+  & li {
+    display: inline;
+  }
+
+  & a {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      border-bottom: 3px solid var(--accent-200);
+    }
+
+    &.active {
+      border-bottom: 3px solid var(--accent-100);
+    }
+  }
+}
