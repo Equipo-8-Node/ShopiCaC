@@ -19,7 +19,7 @@
 }
 
 .btn-width {
-  width: 100px;
+  width: 110px;
 }
 
 /* nav */
@@ -37,6 +37,7 @@
     padding: 10px;
     text-decoration: none;
     text-align: center;
+    
 
     &:hover {
       border-bottom: 3px solid var(--accent-200);
@@ -46,4 +47,10 @@
       border-bottom: 3px solid var(--accent-100);
     }
   }
+}
+
+
+.productos{
+  margin-top: 100px;
+  margin-left: 25px;
 }
