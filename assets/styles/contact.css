@@ -1,0 +1,42 @@
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 10px;
+}
+
+.iframe {
+    grid-column: 1fr;
+}
+
+.form {
+    grid-column: 1fr;
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .form {
+        order: 1;
+    }
+
+    .iframe {
+        order: 2;
+    }
+
+}
