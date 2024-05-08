@@ -1,0 +1,33 @@
+.productos {
+    margin-top: 10px;
+    margin-left: 25px;
+  }
+
+.productos .banner {
+  width: 100%;
+  height: 300px;
+
+}
+
+form {
+  max-width: 500px;
+}
+
+/* Estilo por defecto del checkbox oculto */
+.checkbox-input {
+  display: none;
+}
+
+/* Estilo del label que simula el botón */
+.checkbox-label {
+  display: inline-block;
+  background-color: var(--bs-dark-bg-subtle);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 34px;
+}
+
+/* Estilo cuando el checkbox está seleccionado */
+.checkbox-input:checked + .checkbox-label {
+  background-color: var(--bs-success);
+}
