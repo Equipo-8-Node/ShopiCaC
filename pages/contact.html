@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="../assets/styles/styles.css" />
   <link rel="stylesheet" href="../assets/styles/contact.css" />
 
+  <!-- JS de contacto (para el captcha) -->
+  <script type="text/javascript" src="../assets/js/contact.js"></script>
+
   <title>ShopiCaC - Contacto 📧</title>
 </head>
 
@@ -138,48 +141,73 @@
     </div>
     <!-- theme selector -->
 
+
+    <!-- Comienzo de la página de contacto -->
+
     <div class="productos">
       <h1>Contacto</h1>
 
+      <!-- Iframe del mapa -->
       <div class="contacto">
         <div class="iframe">
           <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0"
               src="https://maps.google.com/maps?hl=en&amp;q=Obelisco,%20Buenos%20Aires,%20Argentina+(Oficina%20central)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-              width="100%" height="400" frameborder="0"></iframe></div>
+              width="100%" height="600" frameborder="0"></iframe></div>
         </div>
 
-        <form action="" method="" target="_blank">
+        <!-- Formulario -->
+
+        <!-- Carga el captcha -->
+        <body onLoad="ChangeCaptcha()"> 
+
+        <form action="" method="POST" target="">
           <div class="form">
-            <label for="nombre">Apellido y nombre</label>
-            <input id=nombre type="text" class="formu-input" name="nombre" placeholder="Ingrese su apellido y nombre">
+            <label for="formnombre">Apellido y nombre</label>
+            <input id=formnombre type="text" class="formu-input" name="formnombre" placeholder="Ingrese su apellido y nombre" required>
           </div>
 
           <div class="form">
-            <label for="mail">Email</label>
-            <input id=email type="text" class="formu-input" name="email" placeholder="Ingrese su email">
+            <label for="formemail">Email</label>
+            <input id=formemail type="email" class="formu-input" name="formemail" placeholder="Ingrese su email" required>
           </div>
 
           <div class="form">
-            <label for="telefono">Teléfono</label>
-            <input id=telefono type="text" class="formu-input" name="telefono" placeholder="Ingrese su teléfono">
+            <label for="formtelefono">Teléfono</label>
+            <input id=formtelefono type="tel" class="formu-input" name="formtelefono" placeholder="Ingrese su teléfono">
           </div>
 
           <div class="form">
-            <label>Ingrese el motivo del contacto</label>
+            <label>Ingrese el motivo de su consulta</label>
           </div>
 
           <div class="form-check">
-            <input id=informacion type="radio" class="formu-input" name="motivo" value="informacion">
-            <label for="informacion">Informacion</label>
+            <input id=forminformacion type="radio" class="formu-input" name="motivo" value="informacion">
+            <label for="forminformacion">Informacion sobre productos</label>
           </div>
 
           <div class="form-check">
-            <input id=otros type="radio" class="formu-input" name="motivo" value="otros">
-            <label for="otros">Otros</label>
+            <input id=formotros type="radio" class="formu-input" name="motivo" value="otros">
+            <label for="formotros">Otras consultas</label>
+          </div>
+
+          <div class="form">
+            <label for="formcomentarios">Dejanos tu consulta</label>
+            <div class="form">
+            <textarea id=formcomentarios class="formu-input" name="formcomentarios" placeholder="Dejanos tu consulta"></textarea>
+            </div>
+          </div>
+
+          <div class="form">
+            <input type="text" id="captcha" disabled> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px" height="30px" type="button" onclick="ChangeCaptcha()"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></svg>
+            <input id="CaptchaEnter" size="20" maxlength="6" />
+
+          <div class="form-button">
+            <input type="button" value="Borrar" onclick="this.form.reset();ChangeCaptcha()"> 
+            <input type="submit" value="Enviar"  onclick="check();return false">
           </div>
 
       </div>
-      
     </div>
   </main>
 

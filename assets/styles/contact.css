@@ -25,6 +25,35 @@ input[type="radio"] {
     width: auto;
 }
 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form-button {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#captcha { 
+    width: 200px;
+    color: black;
+    border-color: black;
+    text-align: center;
+    font-size: 40px;
+    background-image: url('../img/captcha.png');
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    /* -khtml-user-select: none; */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 @media only screen and (max-width: 768px) {
     .contacto {
         display: grid;
