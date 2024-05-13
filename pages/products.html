@@ -9,7 +9,11 @@
       rel="stylesheet"
       href="../assets/styles/css-bootstrap/bootstrap.min.css"
     />
-
+    <link
+      rel="shortcut icon"
+      href="https://firebasestorage.googleapis.com/v0/b/miportfoliocab.appspot.com/o/ShopiCaC.ico?alt=media&token=b78062e1-3676-434f-bd81-84ba55f11037"
+      type="image/x-icon"
+    />
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -183,7 +187,7 @@
         <img
           class="banner"
           src="https://firebasestorage.googleapis.com/v0/b/miportfoliocab.appspot.com/o/banner%202.jpg?alt=media&token=e43bdd81-bb94-42cc-a92f-59fd78000121"
-          alt=""
+          alt="banner"
         />
 
         <form>
@@ -194,47 +198,24 @@
             <input
               type="text"
               class="form-control rounded-end-pill"
-              placeholder="Buscar"
+              placeholder="buscar"
               aria-label="buscar"
               aria-describedby="basic-addon1"
             />
           </div>
 
-          <input type="checkbox" class="checkbox-input" id="categoria-1" />
-          <label for="categoria-1" class="checkbox-label">CATEGORIA 1</label>
-
-          <input type="checkbox" class="checkbox-input" id="categoria-2" />
-          <label for="categoria-2" class="checkbox-label">CATEGORIA 2</label>
-
-          <input type="checkbox" class="checkbox-input" id="categoria-3" />
-          <label for="categoria-3" class="checkbox-label">CATEGORIA 3</label>
-
-          <input type="checkbox" class="checkbox-input" id="categoria-4" />
-          <label for="categoria-4" class="checkbox-label">CATEGORIA 4</label>
+          <fieldset id="checkboxes"></fieldset>
         </form>
 
-        <h1>Agregar:</h1>
-        <ol>
-          <li>Input busqueda (buscar mientras se escribe)</li>
-          <li>Checkboxes para filtrar por categoria(que parezcan botones)</li>
-          <li>
-            Mostrar las cards
-            <ul>
-              <li>imagen</li>
-              <li>Categoria</li>
-              <li>Precio</li>
-              <li>Calificacion??</li>
-              <li>Boton de mas detalles --> dirige a details.html</li>
-              <li>Boton de compra</li>
-            </ul>
-          </li>
-          <li>Ver donde vamos a meter el carrito</li>
-        </ol>
+        <h2>Todos nuestros Productos</h2>
+        <article id="cards"></article>
       </div>
     </main>
 
     <!-- footer 1 -->
-    <!-- <footer
+
+    <!--     
+    <footer
       id="footer"
       class="fixed-bottom footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
     >
@@ -258,10 +239,11 @@
         </footer>
       </div>
     </footer> -->
-    <!-- JS Bootstrap -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-    <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
 
+    <script type="module" src="../assets/js/productos.js"></script>
     <script src="../assets/js/theme.js"></script>
+
+    <!-- JS Bootstrap -->
+    <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
   </body>
 </html>
