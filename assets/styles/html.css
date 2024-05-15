@@ -41,6 +41,14 @@
 }
 
 /* info productos envios */
+body {
+    background-color: #F1F2EB;
+}
+
+.compras-info {
+    background-color: #F1F2EB;
+
+}
 
 .compras-info__items {
     display: flex;
@@ -65,3 +73,114 @@
 .compras__item-icono {
     font-size: 25px;
 }
+
+
+/* lista de productos */
+
+.todos-los-productos {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.producto {
+    overflow: hidden;
+    text-align: center;
+    width: 325px;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFF9;
+}
+
+.producto-info {
+    padding: 16px;
+}
+
+.producto-info h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.producto-info p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    margin: 1rem;
+    transition: all 0.3s;
+}
+
+.producto a:link,
+.producto a:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.producto:hover {
+    box-shadow: 5px 15px 25px #eeee;
+}
+
+.producto:hover img {
+    scale: 1.1;
+}
+
+.producto a:hover {
+    transform: scale(1.1);
+}
+
+.producto-btn {
+    font-family: "Syne", Sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FF5F5F 0%, #ff8471 100%);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    border-radius: 30px;
+    border: 1px solid #c36;
+    font-stretch: 100%;
+    display: inline-block;
+    line-height: 1;
+    background-color: #69727d;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 3px;
+    white-space: nowrap;
+    transition: all .3s;
+    align-items: flex-start;
+    border-radius: 30px;
+    height: auto;
+    width: auto;
+}
+
+.producto-titulo,
+.producto-titulo a {
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: 400;
+}
+
+#producto-1 {}
