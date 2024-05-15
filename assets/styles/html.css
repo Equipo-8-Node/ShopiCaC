@@ -1,0 +1,21 @@
+/* carrousel  */
+
+.carrousel__container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrousel__slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrousel__slide {
+    flex: 0 0 100%;
+}
+
+.carrousel__image {
+    width: 100%;
+    height: auto;
+}

@@ -24,7 +24,7 @@
     />
 
     <link rel="stylesheet" href="./assets/styles/styles.css" />
-
+    <link rel="stylesheet" href="./assets/styles/html.css" />
     <title>ShopiCaC - Inicio 🏪</title>
   </head>
 
@@ -180,9 +180,38 @@
       <!-- theme selector -->
 
       <div class="hero">
-        <figure class="hero-img">
-          <img src="./assets/img/ShopiCaC.png" alt="" />
-        </figure>
+        <!-- CARROUSEL sin bootstrap -->
+        <section class="carrousel">
+          <div class="carrousel__container">
+            <div class="carrousel__slider">
+              <div class="carrousel__slide" style="order: 1">
+                <img
+                  src="/assets/img/diapositivas/slide03.png"
+                  class="carrousel__image"
+                  alt="Banner"
+                />
+              </div>
+              <div class="carrousel__slide" style="order: 2">
+                <img
+                  src="/assets/img/diapositivas/slide03.png"
+                  class="carrousel__image"
+                  alt="Banner"
+                />
+              </div>
+              <div class="carrousel__slide" style="order: 3">
+                <img
+                  src="/assets/img/diapositivas/slide03.png"
+                  class="carrousel__image"
+                  alt="Banner"
+                />
+              </div>
+            </div>
+          </div>
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn">Next</button>
+          <button id="prevBtn">Previous</button>
+          <button id="nextBtn">Next</button>
+        </section>
       </div>
     </main>
 
@@ -218,5 +247,6 @@
     <script src="./assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
 
     <script src="./assets/js/theme.js"></script>
+    <script src="./assets/js/diapositivas.js"></script>
   </body>
 </html>
