@@ -28,7 +28,6 @@
     />
 
     <link rel="stylesheet" href="../assets/styles/styles.css" />
-
     <title>ShopiCaC - Productos 👕</title>
   </head>
 
@@ -86,6 +85,10 @@
     </header>
 
     <main>
+      <!-- boton ir arriba -->
+      <button class="btnScrollUp">
+        <i class="fas fa-chevron-up"><a href="#header"></a></i>
+      </button>
       <!-- theme selector -->
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -212,15 +215,13 @@
       </div>
     </main>
 
-    <!-- footer 1 -->
-
-    <!--     
+    <!-- footer 1 con bootstrap -->
     <footer
       id="footer"
-      class="fixed-bottom footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
+      class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
     >
-      <div class="container">
-        <footer id="footer" class="py-3 my-4">
+      <div class="container footer-container">
+        <div class="py-2">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item btn-width border-2">
               <a href="#" class="nav-link px-2 text-white-50">Inicio</a>
@@ -235,14 +236,13 @@
               <a href="#" class="nav-link px-2 text-white-50">Login</a>
             </li>
           </ul>
-          <p class="text-center text-white-50">© 2024 Company, Inc</p>
-        </footer>
+          <p class="text-center text-white-50">© 2024 ShopiCaC, Inc</p>
+        </div>
       </div>
-    </footer> -->
-
+    </footer>
     <script type="module" src="../assets/js/productos.js"></script>
     <script src="../assets/js/theme.js"></script>
-
+    <script src="../assets/js/btnArriba.js"></script>
     <!-- JS Bootstrap -->
     <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
   </body>

@@ -27,7 +27,7 @@
   }
 
   /* Estilo cuando el checkbox está seleccionado */
-  & .checkbox-input:checked + .checkbox-label {
+  & .checkbox-input:checked+.checkbox-label {
     background-color: var(--bs-success);
   }
 }
