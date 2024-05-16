@@ -7,7 +7,7 @@
 
     <link
       rel="stylesheet"
-      href="./assets/styles/css-bootstrap/bootstrap.min.css"
+      href="../assets/styles/css-bootstrap/bootstrap.min.css"
     />
 
     <!-- <link
@@ -23,9 +23,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <link rel="stylesheet" href="./assets/styles/styles.css" />
-    <link rel="stylesheet" href="./assets/styles/html.css" />
-    <title>ShopiCaC - Inicio 🏪</title>
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+
+    <title>ShopiCaC - Login 🔑</title>
   </head>
 
   <body>
@@ -36,8 +36,8 @@
         <div class="container-xxl d-flex flex-wrap flex-md-nowrap">
           <figure class="my-0">
             <img
-              src="./assets/img/logo ShopiCaC.png"
-              alt="Logo Amazing Events"
+              src="../assets/img/logo ShopiCaC.png"
+              alt="Logo ShopiCaC"
               width="70"
             />
             <figcaption class="text-white text-center">ShopiCaC</figcaption>
@@ -61,19 +61,19 @@
 
             <ul class="navbar-nav barra-navegacion">
               <li class="nav-item btn-width border-2">
-                <a class="nav-link active" href="#">INICIO</a>
+                <a class="nav-link" href="../index.html">INICIO</a>
               </li>
 
               <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="./pages/products.html">PRODUCTOS</a>
+                <a class="nav-link" href="./products.html">PRODUCTOS</a>
               </li>
 
               <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="./pages/contact.html">CONTACTO</a>
+                <a class="nav-link" href="./contact.html">CONTACTO</a>
               </li>
 
               <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="./pages/login.html">LOGIN</a>
+                <a class="nav-link active" href="#">LOGIN</a>
               </li>
             </ul>
           </div>
@@ -179,163 +179,20 @@
       </div>
       <!-- theme selector -->
 
-      <div class="hero">
-        <!-- CARROUSEL sin bootstrap -->
-        <section class="carrousel">
-          <div class="carrousel__container">
-            <div class="carrousel__slider">
-              <div class="carrousel__slide" style="order: 1">
-                <img
-                  src="/assets/img/diapositivas/slide03.png"
-                  class="carrousel__image"
-                  alt="Banner"
-                />
-              </div>
-              <div class="carrousel__slide" style="order: 2">
-                <img
-                  src="/assets/img/diapositivas/slide03.png"
-                  class="carrousel__image"
-                  alt="Banner"
-                />
-              </div>
-              <div class="carrousel__slide" style="order: 3">
-                <img
-                  src="/assets/img/diapositivas/slide03.png"
-                  class="carrousel__image"
-                  alt="Banner"
-                />
-              </div>
-            </div>
-            <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-            <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </section>
+      <div class="productos">
+        <h1>Agregar:</h1>
+        <ol>
+          <li>Un login</li>
+        </ol>
       </div>
-
-      <!-- SECCION INFO sin bootstrap-->
-      <section class="compras-info">
-        <div class="compras-info__container">
-          <div class="compras-info__items">
-            <div class="compras-info__item">
-              <p class="compras__item-icono">
-                <i class="fas fa-truck"></i>
-              </p>
-              <p class="compras__item-titulo">ENVÍOS A TODO EL PAIS</p>
-              <p class="compras__item-subtitulo">
-                Despachamos dentro de las 24 hs
-              </p>
-            </div>
-            <div class="compras-info__item">
-              <p class="compras__item-icono">
-                <i class="far fa-credit-card"></i>
-              </p>
-              <p class="compras__item-titulo">3 CUOTAS SIN INTERES</p>
-              <p class="compras__item-subtitulo">
-                Con todas las tarjetas bancarizadas
-              </p>
-            </div>
-            <div class="compras-info__item">
-              <p class="compras__item-icono">
-                <i class="compras__icono fab fa-whatsapp"></i>
-              </p>
-              <p class="compras__item-titulo">TENES DUDAS?</p>
-              <p class="compras__item-subtitulo">
-                Escribinos! Atención las 24 hs del dia
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FIN SECCION INFO -->
-
-      <!-- SECCION DE PRODUCTOS -->
-      <section class="todos-los-productos">
-        <!--PRODUCTOS 1-->
-        <div class="producto" id="producto-1">
-          <div class="producto-info">
-            <h3 class="producto-titulo">
-              <a href="/pages/products.html" previewlistener="true">
-                Electronica
-              </a>
-            </h3>
-            <img
-              src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
-              alt="Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin"
-            />
-            <a class="producto-btn" href="/pages/products.html">
-              Ver productos
-            </a>
-          </div>
-        </div>
-
-        <!--PRODUCTOS 2-->
-        <div class="producto" id="producto-2">
-          <div class="producto-info">
-            <h3 class="producto-titulo">
-              <a href="/pages/products.html" previewlistener="true">
-                Accesorios
-              </a>
-            </h3>
-            <img
-              src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-              alt="Ropa Masculina"
-            />
-            <a class="producto-btn" href="/pages/products.html">
-              Ver productos
-            </a>
-          </div>
-        </div>
-
-        <!--PRODUCTOS 3-->
-        <div class="producto" id="producto-3">
-          <div class="producto-info">
-            <h3 class="producto-titulo">
-              <a href="/pages/products.html" previewlistener="true"
-                >Ropa de hombre
-              </a>
-            </h3>
-            <img
-              src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
-              alt="Mens Cotton Jacket"
-            />
-            <a class="producto-btn" href="/pages/products.html">
-              Ver productos
-            </a>
-          </div>
-        </div>
-
-        <!--PRODUCTOS 4-->
-        <div class="producto" id="producto-4">
-          <div class="producto-info">
-            <h3 class="producto-titulo">
-              <a href="/pages/products.html" previewlistener="true">
-                Ropa de mujer
-              </a>
-            </h3>
-            <img
-              src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
-              alt="Opna Women's Short Sleeve Moisture"
-            />
-            <a class="producto-btn" href="/pages/products.html">
-              Ver productos
-            </a>
-          </div>
-        </div>
-      </section>
     </main>
-
-    <!-- FIN PRODUCTOS -->
-
-    <!-- footer 1 con bootstrap -->
-
+    <!-- footer 1 -->
     <footer
       id="footer"
-      class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
+      class="fixed-bottom footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
     >
-      <div class="container footer-container">
-        <div class="py-2">
-          <!-- Adjusted padding -->
+      <div class="container">
+        <footer id="footer" class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item btn-width border-2">
               <a href="#" class="nav-link px-2 text-white-50">Inicio</a>
@@ -350,16 +207,14 @@
               <a href="#" class="nav-link px-2 text-white-50">Login</a>
             </li>
           </ul>
-          <p class="text-center text-white-50">© 2024 ShopiCaC, Inc</p>
-        </div>
+          <p class="text-center text-white-50">© 2024 Company, Inc</p>
+        </footer>
       </div>
     </footer>
-
     <!-- JS Bootstrap -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-    <script src="./assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
 
-    <script src="./assets/js/theme.js"></script>
-    <script src="./assets/js/diapositivas.js"></script>
+    <script src="../assets/js/theme.js"></script>
   </body>
 </html>
