@@ -144,7 +144,7 @@ const datos = {
     {
       id: 14,
       titulo:
-        "Monitor de Juegos Curvo Samsung CHG90 de 49 pulgadas 144Hz (LC49HG90DMNXZA) - Pantalla Super Ultra-Ancha QLED",
+        "Monitor de Juegos Curvo Samsung CHG90 de 49 pulgadas 144Hz - Pantalla Super Ultra-Ancha QLED",
       precio: 999.99,
       descripción:
         "MONITOR DE JUEGOS SUPER ULTRA-ANCHO DE 49 PULGADAS 32:9 CURVO con dos pantallas de 27 pulgadas una al lado de la otra. TECNOLOGÍA DE PUNTOS CUÁNTICOS (QLED), soporte HDR y calibración de fábrica que proporciona colores y contrastes sorprendentemente realistas y precisos. TASA DE ACTUALIZACIÓN ALTA DE 144HZ y tiempo de respuesta ultra rápido de 1ms trabajan para eliminar el desenfoque de movimiento, las imágenes fantasma y reducir la latencia de entrada",

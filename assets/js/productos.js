@@ -13,22 +13,22 @@ const crearCards = (productos) => {
   $cards.innerHTML = "";
   productos.forEach((producto) => {
     $cards.innerHTML += `
-      <section class="card h-100 hover my-3 ">
+      <section class="card hover">
         <img
           src="${producto.imagen}"
           class="card-img-top h-50"
           alt="${producto.titulo} image"
         >
 
-        <div class="card-body">
-          <h5 class="card-title">${producto.titulo}</h5>
+        <div class="card-body d-flex flex-column justify-content-between p-2">
+          <p class="card-title">${producto.titulo}</p>
           <p class="card-text">${producto.categoria}</p>
         </div>
 
         <div class="card-footer d-flex justify-content-between">
           <p class="m-2">$ ${producto.precio}</p>
           <a href="../pages/details.html?id=${producto.id}" class="btn btn-outline-danger">
-          Detalles
+          Ver más...
           </a>
         </div>
       </section>    
@@ -46,6 +46,7 @@ const crearCategorias = (array) => {
     if (!accum.includes(element)) {
       accum.push(element);
     }
+
     return accum;
   }, []);
 
@@ -98,7 +99,7 @@ const filterSearch = (array, value) => {
 
 const productoNoEncontrado = () => {
   $cards.innerHTML = "";
-  
+
   $cards.innerHTML = `
     <section class="card h-100 hover">
       <img
@@ -114,7 +115,7 @@ const productoNoEncontrado = () => {
   `;
 };
 
-/***************************************************/
+/*********************************************************************************************************/
 
 crearCards(productos, $cards);
 categorias = crearCategorias(productos);
@@ -129,13 +130,12 @@ const filterAndRender = () => {
   dataFiltered.length === 0
     ? productoNoEncontrado($cards)
     : crearCards(dataFiltered, $cards);
-  // crearCards(dataFiltered, $cards);
 };
 
 $checkboxes.addEventListener("change", () => {
   filterAndRender();
 });
 
-$search.addEventListener("input", (e) => {
+$search.addEventListener("input", () => {
   filterAndRender();
 });
