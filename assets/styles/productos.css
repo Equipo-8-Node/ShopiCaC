@@ -1,7 +1,8 @@
 .productos {
-  max-width: 1200px;
+  /* max-width: 1200px; */
 
   & main {
+    max-width: 1200px;
     position: relative;
     top: 100px;
 
@@ -29,7 +30,7 @@
     & .checkbox-label {
       display: inline-block;
       background-color: var(--bs-dark-bg-subtle);
-      padding: 5px 10px;
+      padding: 5px 15px;
       margin: 3px 0;
       cursor: pointer;
       border-radius: 34px;
@@ -63,6 +64,11 @@
         }
       }
     }
+  }
+
+  & footer {
+    position: relative;
+    top: 150px;
   }
 }
 
