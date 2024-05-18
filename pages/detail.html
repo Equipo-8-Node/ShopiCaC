@@ -9,7 +9,11 @@
       rel="stylesheet"
       href="../assets/styles/css-bootstrap/bootstrap.min.css"
     />
-
+    <link
+      rel="shortcut icon"
+      href="https://firebasestorage.googleapis.com/v0/b/miportfoliocab.appspot.com/o/ShopiCaC.ico?alt=media&token=b78062e1-3676-434f-bd81-84ba55f11037"
+      type="image/x-icon"
+    />
     <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,18 +29,21 @@
 
     <link rel="stylesheet" href="../assets/styles/styles.css" />
 
-    <title>ShopiCaC - Productos</title>
+    <title>ShopiCaC - Detalles del productos 👕</title>
   </head>
 
-  <body>
-
+  <body class="productos">
     <header>
       <nav
         class="fixed-top navbar navbar-expand-md navbar-dark bd-navbar bg-dark bg-gradient bg-opacity-75 bg-blur"
       >
         <div class="container-xxl d-flex flex-wrap flex-md-nowrap">
           <figure class="my-0">
-            <img src="../assets/img/logo ShopiCaC.png" alt="Logo ShopiCaC" width="70" />
+            <img
+              src="../assets/img/logo_ShopiCaC.png"
+              alt="Logo ShopiCaC"
+              width="70"
+            />
             <figcaption class="text-white text-center">ShopiCaC</figcaption>
           </figure>
 
@@ -56,8 +63,7 @@
           <div class="collapse navbar-collapse" id="bdNavbar">
             <hr class="d-md-none text-white-50" />
 
-            <ul class="navbar-nav barra-navegacion ">
-
+            <ul class="navbar-nav barra-navegacion">
               <li class="nav-item btn-width border-2">
                 <a class="nav-link" href="../index.html">INICIO</a>
               </li>
@@ -67,7 +73,7 @@
               </li>
 
               <li class="nav-item btn-width border-2">
-                <a class="nav-link active" href="./contact.html">CONTACTO</a>
+                <a class="nav-link" href="./contact.html">CONTACTO</a>
               </li>
 
               <li class="nav-item btn-width border-2">
@@ -79,8 +85,7 @@
       </nav>
     </header>
 
-
-    <main>
+    <main class="container">
       <!-- theme selector -->
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -177,21 +182,44 @@
         </ul>
       </div>
       <!-- theme selector -->
+      <div id="card-detalles" class="card mb-3">
 
-      <div class="productos">
-        <h1>Agregar: </h1>
-        <ol>
-          <li>Card con todos los detales del producto</li>
-          <li>Boton de compra</li>
-          <li>Boton volver a productos</li>
-        </ol>
       </div>
+
     </main>
 
-    <!-- JS Bootstrap -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-    <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- footer 1 -->
 
+    <footer
+      id="footer"
+      class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
+    >
+      <div class="container footer-container">
+        <div class="py-2">
+          <!-- Adjusted padding -->
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item btn-width border-2">
+              <a href="#" class="nav-link px-2 text-white-50">Inicio</a>
+            </li>
+            <li class="nav-item btn-width border-2">
+              <a href="#" class="nav-link px-2 text-white-50">Productos</a>
+            </li>
+            <li class="nav-item btn-width border-2">
+              <a href="#" class="nav-link px-2 text-white-50">Contacto</a>
+            </li>
+            <li class="nav-item btn-width border-2">
+              <a href="#" class="nav-link px-2 text-white-50">Login</a>
+            </li>
+          </ul>
+          <p class="text-center text-white-50">© 2024 ShopiCaC, Inc</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../assets/js/detalles.js"></script>
     <script src="../assets/js/theme.js"></script>
+
+    <!-- JS Bootstrap -->
+    <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
   </body>
 </html>

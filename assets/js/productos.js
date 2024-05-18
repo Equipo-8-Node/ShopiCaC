@@ -27,7 +27,7 @@ const crearCards = (productos) => {
 
         <div class="card-footer d-flex justify-content-between">
           <p class="m-2">$ ${producto.precio}</p>
-          <a href="../pages/details.html?id=${producto.id}" class="btn btn-outline-danger">
+          <a href="../pages/detail.html?id=${producto.id}" class="btn btn-outline-danger">
           Ver más...
           </a>
         </div>
