@@ -182,27 +182,28 @@
 
       <!-- theme selector -->
 
-      <div class="form-contenedor">
+      <div class="form-contenedor-externo">
         <form action="" method="POST" target="">
           <h2>Iniciar sesión</h2>
 
-          <div class="form">
-            <input
-              type="text"
-              class="formu-input"
-              name="usuario"
-              placeholder="Usuario"
-            />
+          <div class="form-contenedor-interno">
+            <div class="form-usuario">
+              <input
+                type="text"
+                class="formu-input"
+                name="usuario"
+                placeholder="Usuario"
+              />
+            </div>
+            <div class="form-pass">
+              <input
+                type="text"
+                class="formu-input"
+                name="contrasena"
+                placeholder="Contraseña"
+              />
+            </div>
           </div>
-          <div class="form">
-            <input
-              type="text"
-              class="formu-input"
-              name="contrasena"
-              placeholder="Contraseña"
-            />
-          </div>
-
           <div class="olvido-contrasena">
             <label
               ><input type="checkbox" class="checkbox-input" /> Recordar</label
@@ -246,5 +247,6 @@
     <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
 
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/login.js"></script>
   </body>
 </html>
