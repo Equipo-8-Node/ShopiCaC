@@ -1,6 +1,5 @@
 .productos {
   margin-top: 10px;
-  margin-left: 25px;
 
   & .banner {
     width: 100%;
@@ -30,4 +29,13 @@
   & .checkbox-input:checked+.checkbox-label {
     background-color: var(--bs-success);
   }
+}
+
+.btnArriba {
+  color: white !important;
+}
+
+#footer {
+  margin: 0 !important;
+  padding: 0 !important;
 }
