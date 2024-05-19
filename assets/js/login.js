@@ -1,16 +1,22 @@
-const formButton = document.getElementsByClassName("form-button");
-formButton.addEventListener("onclick", validarCampos);
+const loginForm = document.querySelector("#login-form");
+
+const inputUsuario = document.querySelector("#inputUsuario");
+const inputContrasena = document.querySelector("#inputContrasena");
+
+loginForm.addEventListener("submit", validarCampos);
 
 function validarCampos() {
-  if (document.getElementsByClassName("form-usuario").value == "") {
-    alert("Por favor ingrese su usuario");
-    document.getElementsByClassName("form-usuario").focus();
-    return false;
+  if (inputUsuario.value == "") {
+    alert("Por favor ingrese su usuario.");
+    inputUsuario.focus();
+    return;
   }
 
-  if (!document.getElementsByClassName("form-pass").value == "") {
-    alert("Por favor ingrese su contraseña");
-    document.getElementsByClassName("form-pass").focus();
-    return false;
+  if (inputContrasena.value == "") {
+    alert("Por favor ingrese su contraseña.");
+    inputContrasena.focus();
+    return;
   }
+
+  form.submit();
 }
