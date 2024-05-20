@@ -40,7 +40,7 @@
         <div class="container-xxl d-flex flex-wrap flex-md-nowrap">
           <figure class="my-0">
             <img
-              src="../assets/img/logo ShopiCaC.png"
+              src="../assets/img/logo_ShopiCaC.png"
               alt="Logo ShopiCaC"
               width="70"
             />
@@ -78,6 +78,18 @@
 
               <li class="nav-item btn-width border-2">
                 <a class="nav-link" href="./login.html">LOGIN</a>
+              </li>
+
+              <li class="nav-item btn-width border-2">
+                <button
+                  class="btn btn-bd-primary"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasWithBothOptions"
+                  aria-controls="offcanvasWithBothOptions"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </button>
               </li>
             </ul>
           </div>
@@ -183,11 +195,46 @@
       </div>
       <!-- theme selector -->
 
-      <img
-        class="banner"
-        src="https://firebasestorage.googleapis.com/v0/b/miportfoliocab.appspot.com/o/banner%202.jpg?alt=media&token=e43bdd81-bb94-42cc-a92f-59fd78000121"
-        alt="banner"
-      />
+      <!-- carrito -->
+      <div
+        class="offcanvas offcanvas-start"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+            Carrito
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div id="cart-container" class="offcanvas-body">
+          <button class="btn" id="clear-cart-btn">Limpiar carrito</button>
+
+          <ul class="list-group">
+            <li
+              class="list-group-item list-group-item-action list-group-item-success"
+            >
+              <p>Productos en el carrito: <span id="total-items">0</span></p>
+              <p>Valor del carrito: <span id="total">$ 0</span></p>
+            </li>
+          </ul>
+
+          <hr />
+
+          <ul id="products-container" class="list-group"></ul>
+        </div>
+      </div>
+      <!-- carrito -->
+
+      <img class="banner" src="../assets/img/banner_2.jpg" alt="banner" />
 
       <form class="filtros bg-gradient bg-opacity-75 bg-blur p-3">
         <div class="input-group mb-2 w-75">
