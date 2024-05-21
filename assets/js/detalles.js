@@ -1,7 +1,7 @@
 import datos from "./datos.js";
 
 const $container = document.getElementById("card-detalles");
-const $back = document.getElementById("buttonBack");
+const $volver = document.getElementById("botonVolver");
 
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
@@ -36,3 +36,7 @@ const detalleProducto = (producto) => {
 
 
 detalleProducto(producto)
+
+$volver.addEventListener('click', () => {
+	window.history.back();
+});
