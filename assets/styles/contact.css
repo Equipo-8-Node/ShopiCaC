@@ -1,3 +1,13 @@
+body {
+    position: relative;
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+}
+
 .contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -39,7 +49,7 @@ textarea {
     gap: 20px;
 }
 
-#captcha { 
+#captcha {
     width: 200px;
     color: black;
     border-color: black;

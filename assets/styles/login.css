@@ -1,0 +1,110 @@
+main {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-contenedor-externo {
+    text-align: center;
+    box-shadow: 0.5;
+    justify-content: center !important;
+    display: flex;
+    width: 500px;
+    background-color: var(--bs-tertiary-bg);
+    border-radius: 20px;
+    margin-top: 1rem;
+    box-shadow: var(--bs-box-shadow-sm);
+
+    & .banner {
+        width: 100%;
+        height: 300px;
+        margin-top: 80px;
+    }
+
+    & form {
+        max-width: 500px;
+    }
+
+    /* Estilo por defecto del checkbox oculto */
+    & .checkbox-input {
+        display: inline-block;
+    }
+
+    /* Estilo del label que simula el botón */
+    & .checkbox-label {
+        display: inline-block;
+        background-color: var(--bs-dark-bg-subtle);
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 34px;
+    }
+
+    /* Estilo cuando el checkbox está seleccionado */
+    & .checkbox-input:checked+.checkbox-label {
+        background-color: var(--bs-success);
+    }
+}
+
+form {
+    justify-content: center !important;
+    width: 400px;
+}
+
+.form-contenedor-externo h2 {
+    font-size: 37px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.form-contenedor-externo .formu-input {
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.form-contenedor-interno {
+    padding-top: 2.3rem;
+}
+
+.formu-input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 10px;
+    background: transparent;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+.formu-input input::placeholder {
+    color: grey;
+}
+
+.olvido-contrasena {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.olvido-contrasena a {}
+
+.registro-link a {}
+
+.registro-link {
+    margin: 2rem;
+}
+
+.login-button {
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}

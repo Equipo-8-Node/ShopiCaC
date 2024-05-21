@@ -28,7 +28,6 @@
     />
 
     <link rel="stylesheet" href="../assets/styles/styles.css" />
-
     <title>ShopiCaC - Productos 👕</title>
   </head>
 
@@ -98,6 +97,10 @@
     </header>
 
     <main class="container">
+      <!-- boton ir arriba -->
+      <button class="btnScrollUp">
+        <a href="#header"><i class="fas fa-chevron-up btnArriba"></i></a>
+      </button>
       <!-- theme selector -->
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -260,13 +263,14 @@
 
     <!-- footer 1 -->
 
+    <!-- footer 1 con bootstrap -->
     <footer
       id="footer"
+      class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
       class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
     >
       <div class="container footer-container">
         <div class="py-2">
-          <!-- Adjusted padding -->
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item btn-width border-2">
               <a href="#" class="nav-link px-2 text-white-50">Inicio</a>
@@ -288,6 +292,7 @@
 
     <script type="module" src="../assets/js/productos.js"></script>
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/btnArriba.js"></script>
 
     <!-- JS Bootstrap -->
     <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
