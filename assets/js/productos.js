@@ -5,7 +5,7 @@ const productos = datos.productos;
 const $cards = document.getElementById("cards");
 const $checkboxes = document.getElementById("checkboxes");
 const $search = document.querySelector('input[placeholder="buscar"]');
-const clearCartBtn = document.getElementById("clear-cart-btn");
+const $clearCartBtn = document.getElementById("clear-cart-btn");
 
 const cart = new ShoppingCart();
 
@@ -124,15 +124,12 @@ document.addEventListener("click", (event) => {
 
 $checkboxes.addEventListener("change", filterAndRender);
 $search.addEventListener("input", filterAndRender);
-clearCartBtn.addEventListener("click", () => {
+$clearCartBtn.addEventListener("click", () => {
   cart.clearCart();
   cart.updateCartUI();
 });
 
-const init = () => {
-  crearCards(productos);
-  const categorias = crearCategorias(productos);
-  crearCheckbox(categorias);
-};
 
-init();
+crearCards(productos);
+const categorias = crearCategorias(productos);
+crearCheckbox(categorias);

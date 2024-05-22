@@ -2,9 +2,9 @@
 import datos from "./datos.js";
 
 // Seleccionar elementos del DOM
-const productsContainer = document.getElementById("products-container"); // Contenedor de productos
-const totalNumberOfItems = document.getElementById("total-items"); // Elemento que muestra el total de elementos en el carrito
-const cartTotal = document.getElementById("total"); // Elemento que muestra el total del carrito
+const $productsContainer = document.getElementById("products-container"); // Contenedor de productos
+const $totalNumberOfItems = document.getElementById("total-items"); // Elemento que muestra el total de elementos en el carrito
+const $cartTotal = document.getElementById("total"); // Elemento que muestra el total del carrito
 const productos = datos.productos;
 
 // Clase ShoppingCart para manejar el carrito de compras
@@ -40,7 +40,7 @@ export class ShoppingCart {
     if (currentProductCount > 1) {
       currentProductCountSpan.textContent = `${currentProductCount}x `;
     } else {
-      productsContainer.innerHTML += `
+      $productsContainer.innerHTML += `
       <li id=producto${id} class="list-group-item list-group-item-action list-group-item-success">
         <img
             src="${imagen}"
@@ -79,9 +79,9 @@ export class ShoppingCart {
     if (isCartCleared) {
       this.items = [];
       this.total = 0;
-      productsContainer.innerHTML = "";
-      totalNumberOfItems.textContent = 0;
-      cartTotal.textContent = 0;
+      $productsContainer.innerHTML = "";
+      $totalNumberOfItems.textContent = 0;
+      $cartTotal.textContent = 0;
       this.saveCart();
     }
   }
@@ -89,7 +89,7 @@ export class ShoppingCart {
   // Método para calcular el total del carrito
   calculateTotal() {
     this.total = this.items.reduce((total, item) => total + item.precio, 0);
-    cartTotal.textContent = `$${this.total.toFixed(2)}`;
+    $cartTotal.textContent = `$${this.total.toFixed(2)}`;
     return this.total;
   }
 
@@ -106,7 +106,7 @@ export class ShoppingCart {
 
   // Método para actualizar la interfaz de usuario del carrito
   updateCartUI() {
-    productsContainer.innerHTML = "";
+    $productsContainer.innerHTML = "";
     const totalCountPerProduct = {};
     this.items.forEach((dessert) => {
       totalCountPerProduct[dessert.id] =
@@ -116,7 +116,7 @@ export class ShoppingCart {
     for (const id in totalCountPerProduct) {
       const producto = productos.find((item) => item.id == id);
       const currentProductCount = totalCountPerProduct[id];
-      productsContainer.innerHTML += `
+      $productsContainer.innerHTML += `
       <li id="producto${producto.id}" class="list-group-item list-group-item-action list-group-item-success">
         <img
             src="${producto.imagen}"
@@ -131,7 +131,7 @@ export class ShoppingCart {
       `;
     }
 
-    totalNumberOfItems.textContent = this.getCounts();
+    $totalNumberOfItems.textContent = this.getCounts();
     this.calculateTotal();
   }
 }
