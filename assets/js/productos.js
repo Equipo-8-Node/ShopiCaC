@@ -13,7 +13,7 @@ const crearCards = (productos) => {
   $cards.innerHTML = productos
     .map(
       (producto) =>
-      `
+        `
         <section class="card hover">
           <img
             src="${producto.imagen}"
@@ -113,22 +113,25 @@ const filterAndRender = () => {
   }
 };
 
-// Delegación de eventos para los botones "Agregar al carrito"
+/****************************************************************************************************************/
+
 document.addEventListener("click", (event) => {
   if (event.target.closest(".add-to-cart-btn")) {
     const btn = event.target.closest(".add-to-cart-btn");
+
     cart.addItem(Number(btn.id), productos);
     cart.updateCartUI();
+    cart.mostrarNotificacion();
   }
 });
 
 $checkboxes.addEventListener("change", filterAndRender);
 $search.addEventListener("input", filterAndRender);
+
 $clearCartBtn.addEventListener("click", () => {
   cart.clearCart();
   cart.updateCartUI();
 });
-
 
 crearCards(productos);
 const categorias = crearCategorias(productos);

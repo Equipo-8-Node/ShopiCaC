@@ -1,10 +1,10 @@
-// Asegurarse de que este script se cargue como un módulo
 import datos from "./datos.js";
 
 // Seleccionar elementos del DOM
 const $productsContainer = document.getElementById("products-container"); // Contenedor de productos
 const $totalNumberOfItems = document.getElementById("total-items"); // Elemento que muestra el total de elementos en el carrito
 const $cartTotal = document.getElementById("total"); // Elemento que muestra el total del carrito
+
 const productos = datos.productos;
 
 // Clase ShoppingCart para manejar el carrito de compras
@@ -55,7 +55,7 @@ export class ShoppingCart {
       `;
     }
 
-    alert("Producto agregado al carrito");
+    // alert("Producto agregado al carrito");
     this.saveCart();
     this.updateCartUI();
   }
@@ -133,5 +133,16 @@ export class ShoppingCart {
 
     $totalNumberOfItems.textContent = this.getCounts();
     this.calculateTotal();
+  }
+
+  // Método para mostrar notificaciones al agregar un producto al carrito
+  mostrarNotificacion() {
+    const toastTrigger = document.querySelector('.add-to-cart-btn');
+    const toast = document.getElementById("toast");
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast);
+      toastBootstrap.show();
+    }
   }
 }
