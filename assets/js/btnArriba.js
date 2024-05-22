@@ -1,16 +1,16 @@
-const btnScrollUp = document.querySelector(".btnScrollUp");
+const btnArriba = document.querySelector(".btnArriba");
 
 window.onscroll = function () {
   var posicion = window.scrollY;
 
   if (posicion > 0) {
-    btnScrollUp.style.display = "block";
+    btnArriba.style.display = "flex";
   } else {
-    btnScrollUp.style.display = "none";
+    btnArriba.style.display = "none";
   }
 };
 
-btnScrollUp.addEventListener("click", scrollUp);
+btnArriba.addEventListener("click", scrollUp);
 
 function scrollUp() {
   window.scrollTo({

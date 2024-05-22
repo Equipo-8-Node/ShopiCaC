@@ -59,21 +59,31 @@
 
 
 /* boton Ir arriba */
-.btnScrollUp {
+.btnArriba {
   display: none;
   position: fixed;
   bottom: 20px;
   left: 20px;
   background-color: #F07423;
   color: #fff;
-  border: none;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   font-size: 24px;
   cursor: pointer;
   z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
+
+.iconoArriba {
+  color: white !important;
+  text-decoration: none;
+}
+
+
+/* Footer */
 
 footer {
   position: relative;
