@@ -43,7 +43,7 @@ const crearCards = (productos) => {
 
 const crearCategorias = (array) => {
   const categoriasUnicas = [
-    ...new Set(array.map((producto) => producto.categoria)),
+    ...new Set(array.map((producto) => producto.categoria))
   ];
   return categoriasUnicas;
 };
@@ -113,7 +113,17 @@ const filterAndRender = () => {
   }
 };
 
+// reinicio del formulario al retroceder con el botón "Volver" en la página details
+export const resetForm = () => {
+  window.addEventListener("pageshow", () => {
+    const form = document.querySelector('.filtros');
+    form.reset();
+  });
+};
+
 /****************************************************************************************************************/
+
+resetForm(); //reinicio el formulario (checkboxes y search)
 
 document.addEventListener("click", (event) => {
   if (event.target.closest(".add-to-cart-btn")) {
