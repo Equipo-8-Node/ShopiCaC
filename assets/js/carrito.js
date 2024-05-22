@@ -17,7 +17,7 @@ export class ShoppingCart {
 
   // Método para agregar un item al carrito
   addItem(id, products) {
-    console.log(id);
+    // console.log(id);
     // console.log(products)
     const product = products.find((item) => item.id === id);
     // console.log(product.id)
@@ -86,16 +86,9 @@ export class ShoppingCart {
     }
   }
 
-  // Método para calcular los impuestos
-  calculateTaxes(amount) {
-    return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
-  }
-
   // Método para calcular el total del carrito
   calculateTotal() {
-    const subTotal = this.items.reduce((total, item) => total + item.price, 0);
-    const tax = this.calculateTaxes(subTotal);
-    this.total = subTotal + tax;
+    this.total = this.items.reduce((total, item) => total + item.precio, 0);
     cartTotal.textContent = `$${this.total.toFixed(2)}`;
     return this.total;
   }
@@ -131,7 +124,7 @@ export class ShoppingCart {
             alt="${producto.titulo} image"
           >
           <p>
-          <span class="product-count" id=product-count-for-id${producto.id}>${currentProductCount}x</span>${producto.titulo}
+          <span class="product-count" id=product-count-for-id${producto.id}>${currentProductCount} x </span>${producto.titulo}
         </p>
           <p>$${producto.precio}</p>
       </li>
