@@ -1,7 +1,7 @@
 // Las variables para saber en qué página estoy
 
-var ruta = window.location.pathname;
-var pagina = ruta.split("/").pop();
+const ruta = window.location.pathname;
+const pagina = ruta.split("/").pop();
 
 function header() {
   document.getElementById("idheader").innerHTML = `
@@ -72,7 +72,7 @@ function header() {
 
 // Muestra el boton del carrito sólo en la página de productos
 function mostrarcarrito() {
-  if (pagina === "products.html") {
+  if (pagina === "products.html" || pagina === "products") {
     document.getElementById("idcarrito").style.visibility = "visible";
   }
 }
@@ -84,12 +84,15 @@ function activenavbar() {
       document.getElementById("navbarinicio").classList.add("active");
       break;
     case "products.html":
+    case "products":
       document.getElementById("navbarproductos").classList.add("active");
       break;
     case "contact.html":
+    case "contact":
       document.getElementById("navbarcontacto").classList.add("active");
       break;
     case "login.html":
+    case "login":
       document.getElementById("navbarlogin").classList.add("active");
       break;
   }
