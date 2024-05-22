@@ -1,10 +1,17 @@
+body {
+    position: relative;
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+
 .contacto {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin: 10px;
+    margin: 20px;
+    margin-bottom: 130px;
     position: relative;
-    top: 100px
+    
 }
 
 .iframe {
@@ -16,6 +23,10 @@
     margin: 10px;
 }
 
+form h2{
+    margin-left: 5px
+}
+
 input {
     width: 100%;
     padding: 10px;
@@ -23,7 +34,7 @@ input {
     border-radius: 10px;
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
     width: auto;
 }
 
@@ -39,7 +50,7 @@ textarea {
     gap: 20px;
 }
 
-#captcha { 
+#captcha {
     width: 200px;
     color: black;
     border-color: black;
@@ -49,10 +60,14 @@ textarea {
 
     -webkit-touch-callout: none;
     -webkit-user-select: none;
-    /* -khtml-user-select: none; */
+    -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+footer {
+    margin-top: auto;
 }
 
 

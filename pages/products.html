@@ -28,76 +28,18 @@
     />
 
     <link rel="stylesheet" href="../assets/styles/styles.css" />
-
     <title>ShopiCaC - Productos 👕</title>
   </head>
 
   <body class="productos">
-    <header>
-      <nav
-        class="fixed-top navbar navbar-expand-md navbar-dark bd-navbar bg-dark bg-gradient bg-opacity-75 bg-blur"
-      >
-        <div class="container-xxl d-flex flex-wrap flex-md-nowrap">
-          <figure class="my-0">
-            <img
-              src="../assets/img/logo_ShopiCaC.png"
-              alt="Logo ShopiCaC"
-              width="70"
-            />
-            <figcaption class="text-white text-center">ShopiCaC</figcaption>
-          </figure>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#bdNavbar"
-            aria-controls="bdNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="bi bi-list"></i>
-          </button>
-
-          <!-- nav -->
-          <div class="collapse navbar-collapse" id="bdNavbar">
-            <hr class="d-md-none text-white-50" />
-
-            <ul class="navbar-nav barra-navegacion">
-              <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="../index.html">INICIO</a>
-              </li>
-
-              <li class="nav-item btn-width border-2">
-                <a class="nav-link active" href="#">PRODUCTOS</a>
-              </li>
-
-              <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="./contact.html">CONTACTO</a>
-              </li>
-
-              <li class="nav-item btn-width border-2">
-                <a class="nav-link" href="./login.html">LOGIN</a>
-              </li>
-
-              <li class="nav-item btn-width border-2">
-                <button
-                  class="btn btn-bd-primary"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
-                >
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header id="idheader"></header>
 
     <main class="container">
+      <!-- boton ir arriba -->
+      <a href="#header" class="btnArriba"
+        ><i class="fa fa-chevron-up iconoArriba"></i
+      ></a>
+
       <!-- theme selector -->
       <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="check2" viewBox="0 0 16 16">
@@ -260,36 +202,22 @@
 
     <!-- footer 1 -->
 
+    <!-- footer 1 con bootstrap -->
     <footer
-      id="footer"
+      id="idfooter"
       class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"
-    >
-      <div class="container footer-container">
-        <div class="py-2">
-          <!-- Adjusted padding -->
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item btn-width border-2">
-              <a href="#" class="nav-link px-2 text-white-50">Inicio</a>
-            </li>
-            <li class="nav-item btn-width border-2">
-              <a href="#" class="nav-link px-2 text-white-50">Productos</a>
-            </li>
-            <li class="nav-item btn-width border-2">
-              <a href="#" class="nav-link px-2 text-white-50">Contacto</a>
-            </li>
-            <li class="nav-item btn-width border-2">
-              <a href="#" class="nav-link px-2 text-white-50">Login</a>
-            </li>
-          </ul>
-          <p class="text-center text-white-50">© 2024 ShopiCaC, Inc</p>
-        </div>
-      </div>
-    </footer>
+    ></footer>
 
     <script type="module" src="../assets/js/productos.js"></script>
     <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/btnArriba.js"></script>
 
     <!-- JS Bootstrap -->
     <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Script header -->
+    <script src="../assets/js/header.js"></script>
+    <!-- Script footer -->
+    <script src="../assets/js/footer.js"></script>
   </body>
 </html>
