@@ -1,0 +1,22 @@
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 80vh;
+    position: relative;
+    top: 100px;
+
+  }
+
+  & footer {
+    position: relative;
+    top: 150px;
+  }
+}
