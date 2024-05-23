@@ -111,16 +111,16 @@
     <div class="contacto">
       <div class="iframe">
         <h2>Donde encontrarnos</h2>
-        <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0"
+        <div><iframe
             src="https://maps.google.com/maps?hl=en&amp;q=Obelisco,%20Buenos%20Aires,%20Argentina+(Oficina%20central)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            width="100%" height="600" frameborder="0"></iframe></div>
+            width="100%" height="600"></iframe></div>
       </div>
 
       <!-- Formulario -->
 
       <!-- Carga el captcha -->
 
-      <body onLoad="ChangeCaptcha()">
+      <main onLoad="ChangeCaptcha()">
 
         <form action="" method="POST" target="">
           <h2>Envianos tu consulta</h2>
@@ -148,7 +148,7 @@
               <option value="otros">Otras consultas</option>
             </select>
           </div>
-            
+
           <div class="form">
             <label for="formcomentarios">Dejanos tu consulta</label>
             <div class="form">
@@ -158,8 +158,8 @@
           </div>
 
           <div class="form">
-          <label for="imagen">También podés envianos una imagen</label>
-          <input type="file" id="img" name="img" accept="image/*">
+            <label for="imagen">También podés envianos una imagen</label>
+            <input type="file" id="img" name="img" accept="image/*">
           </div>
 
           <div class="form">
@@ -176,7 +176,7 @@
               <input id=formotros type="checkbox" class="formu-input" checked>
               <label for="formotros">Acepto recibir novedades y promociones</label>
             </div>
-              
+
 
             <div class="form-button">
               <input type="button" value="Borrar" onclick="this.form.reset();ChangeCaptcha()">
@@ -185,19 +185,19 @@
 
           </div>
 
-  </main>
+      </main>
 
-  <footer id="idfooter" class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"></footer>
-  <!-- JS Bootstrap -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-  <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
+      <footer id="idfooter" class="footer-dark bd-footer bg-dark bg-gradient bg-opacity-75 bg-blur"></footer>
+      <!-- JS Bootstrap -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+      <script src="../assets/js/js-bootstrap/bootstrap.bundle.min.js"></script>
 
-  <script src="../assets/js/theme.js"></script>
+      <script src="../assets/js/theme.js"></script>
 
-  <!-- Script header -->
-  <script src="../assets/js/header.js"></script>
-  <!-- Script footer -->
-  <script src="../assets/js/footer.js"></script>
+      <!-- Script header -->
+      <script src="../assets/js/header.js"></script>
+      <!-- Script footer -->
+      <script src="../assets/js/footer.js"></script>
 
 </body>
 
