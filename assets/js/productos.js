@@ -5,7 +5,7 @@ const productos = datos.productos;
 const $cards = document.getElementById("cards");
 const $checkboxes = document.getElementById("checkboxes");
 const $search = document.querySelector('input[placeholder="buscar"]');
-const clearCartBtn = document.getElementById("clear-cart-btn");
+const $clearCartBtn = document.getElementById("clear-cart-btn");
 
 const cart = new ShoppingCart();
 
@@ -13,7 +13,7 @@ const crearCards = (productos) => {
   $cards.innerHTML = productos
     .map(
       (producto) =>
-      `
+        `
         <section class="card hover">
           <img
             src="${producto.imagen}"
@@ -43,7 +43,7 @@ const crearCards = (productos) => {
 
 const crearCategorias = (array) => {
   const categoriasUnicas = [
-    ...new Set(array.map((producto) => producto.categoria)),
+    ...new Set(array.map((producto) => producto.categoria))
   ];
   return categoriasUnicas;
 };
@@ -113,26 +113,36 @@ const filterAndRender = () => {
   }
 };
 
-// Delegación de eventos para los botones "Agregar al carrito"
+// reinicio del formulario al retroceder con el botón "Volver" en la página details
+export const resetForm = () => {
+  window.addEventListener("pageshow", () => {
+    const form = document.querySelector('.filtros');
+    form.reset();
+  });
+};
+
+/****************************************************************************************************************/
+
+resetForm(); //reinicio el formulario (checkboxes y search)
+
 document.addEventListener("click", (event) => {
   if (event.target.closest(".add-to-cart-btn")) {
     const btn = event.target.closest(".add-to-cart-btn");
+
     cart.addItem(Number(btn.id), productos);
     cart.updateCartUI();
+    cart.mostrarNotificacion();
   }
 });
 
 $checkboxes.addEventListener("change", filterAndRender);
 $search.addEventListener("input", filterAndRender);
-clearCartBtn.addEventListener("click", () => {
+
+$clearCartBtn.addEventListener("click", () => {
   cart.clearCart();
   cart.updateCartUI();
 });
 
-const init = () => {
-  crearCards(productos);
-  const categorias = crearCategorias(productos);
-  crearCheckbox(categorias);
-};
-
-init();
+crearCards(productos);
+const categorias = crearCategorias(productos);
+crearCheckbox(categorias);

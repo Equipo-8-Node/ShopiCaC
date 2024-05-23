@@ -1,10 +1,10 @@
-// Asegurarse de que este script se cargue como un módulo
 import datos from "./datos.js";
 
 // Seleccionar elementos del DOM
-const productsContainer = document.getElementById("products-container"); // Contenedor de productos
-const totalNumberOfItems = document.getElementById("total-items"); // Elemento que muestra el total de elementos en el carrito
-const cartTotal = document.getElementById("total"); // Elemento que muestra el total del carrito
+const $productsContainer = document.getElementById("products-container"); // Contenedor de productos
+const $totalNumberOfItems = document.getElementById("total-items"); // Elemento que muestra el total de elementos en el carrito
+const $cartTotal = document.getElementById("total"); // Elemento que muestra el total del carrito
+
 const productos = datos.productos;
 
 // Clase ShoppingCart para manejar el carrito de compras
@@ -17,7 +17,7 @@ export class ShoppingCart {
 
   // Método para agregar un item al carrito
   addItem(id, products) {
-    console.log(id);
+    // console.log(id);
     // console.log(products)
     const product = products.find((item) => item.id === id);
     // console.log(product.id)
@@ -40,7 +40,7 @@ export class ShoppingCart {
     if (currentProductCount > 1) {
       currentProductCountSpan.textContent = `${currentProductCount}x `;
     } else {
-      productsContainer.innerHTML += `
+      $productsContainer.innerHTML += `
       <li id=producto${id} class="list-group-item list-group-item-action list-group-item-success">
         <img
             src="${imagen}"
@@ -55,7 +55,7 @@ export class ShoppingCart {
       `;
     }
 
-    alert("Producto agregado al carrito");
+    // alert("Producto agregado al carrito");
     this.saveCart();
     this.updateCartUI();
   }
@@ -79,24 +79,17 @@ export class ShoppingCart {
     if (isCartCleared) {
       this.items = [];
       this.total = 0;
-      productsContainer.innerHTML = "";
-      totalNumberOfItems.textContent = 0;
-      cartTotal.textContent = 0;
+      $productsContainer.innerHTML = "";
+      $totalNumberOfItems.textContent = 0;
+      $cartTotal.textContent = 0;
       this.saveCart();
     }
   }
 
-  // Método para calcular los impuestos
-  calculateTaxes(amount) {
-    return parseFloat(((this.taxRate / 100) * amount).toFixed(2));
-  }
-
   // Método para calcular el total del carrito
   calculateTotal() {
-    const subTotal = this.items.reduce((total, item) => total + item.price, 0);
-    const tax = this.calculateTaxes(subTotal);
-    this.total = subTotal + tax;
-    cartTotal.textContent = `$${this.total.toFixed(2)}`;
+    this.total = this.items.reduce((total, item) => total + item.precio, 0);
+    $cartTotal.textContent = `$${this.total.toFixed(2)}`;
     return this.total;
   }
 
@@ -113,7 +106,7 @@ export class ShoppingCart {
 
   // Método para actualizar la interfaz de usuario del carrito
   updateCartUI() {
-    productsContainer.innerHTML = "";
+    $productsContainer.innerHTML = "";
     const totalCountPerProduct = {};
     this.items.forEach((dessert) => {
       totalCountPerProduct[dessert.id] =
@@ -123,7 +116,7 @@ export class ShoppingCart {
     for (const id in totalCountPerProduct) {
       const producto = productos.find((item) => item.id == id);
       const currentProductCount = totalCountPerProduct[id];
-      productsContainer.innerHTML += `
+      $productsContainer.innerHTML += `
       <li id="producto${producto.id}" class="list-group-item list-group-item-action list-group-item-success">
         <img
             src="${producto.imagen}"
@@ -131,14 +124,25 @@ export class ShoppingCart {
             alt="${producto.titulo} image"
           >
           <p>
-          <span class="product-count" id=product-count-for-id${producto.id}>${currentProductCount}x</span>${producto.titulo}
+          <span class="product-count" id=product-count-for-id${producto.id}>${currentProductCount} x </span>${producto.titulo}
         </p>
           <p>$${producto.precio}</p>
       </li>
       `;
     }
 
-    totalNumberOfItems.textContent = this.getCounts();
+    $totalNumberOfItems.textContent = this.getCounts();
     this.calculateTotal();
+  }
+
+  // Método para mostrar notificaciones al agregar un producto al carrito
+  mostrarNotificacion() {
+    const toastTrigger = document.querySelector('.add-to-cart-btn');
+    const toast = document.getElementById("toast");
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toast);
+      toastBootstrap.show();
+    }
   }
 }
