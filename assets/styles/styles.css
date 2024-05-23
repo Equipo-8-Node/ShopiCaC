@@ -34,7 +34,7 @@
 
 .barra-navegacion {
   padding: 10px;
-  text-align: end;
+  text-align: center;
   margin-left: auto;
 
   & li {
