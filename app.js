@@ -1,10 +1,8 @@
 const express = require('express');
+const path = require('path');
+
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hola, mundo!');
-});
-
-app.listen(3000, () => {
-    console.log('Servidor escuchando en http://localhost:3000');
-});
+// Configurar el motor de plantillas EJS
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
