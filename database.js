@@ -1,22 +1,19 @@
 // Conexion a BD
-const mysql = require('mysql');
+const mysql = require('promise-mysql');
+const dotenv = require('dotenv')
+dotenv.config();
 
 // Configurar la conexión a la base de datos
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Admin1234',
-    database: 'shopicac_db'
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database
 });
 
 // Conectar a la base de datos
-connection.connect((err) => {
-    if (err) {
-        console.error('Error al conectar a la base de datos:', err);
-        return;
-    }
-    console.log('Conexión exitosa a la base de datos');
-});
+const getConnection = async () => await connection;
 
-// Exportar la conexión para usarla en otros módulos
-module.exports = connection;
+module.exports = {
+    getConnection
+}
