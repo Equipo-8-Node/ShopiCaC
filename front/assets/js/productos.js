@@ -1,7 +1,7 @@
-import datos from "./datos.js";
+//import datos from "./datos.js";
 import { ShoppingCart } from "./carrito.js";
 
-const productos = datos.productos;
+//const productos = datos.productos;
 const $cards = document.getElementById("cards");
 const $checkboxes = document.getElementById("checkboxes");
 const $search = document.querySelector('input[placeholder="buscar"]');
@@ -9,6 +9,7 @@ const $clearCartBtn = document.getElementById("clear-cart-btn");
 
 const cart = new ShoppingCart();
 
+/*
 const crearCards = (productos) => {
   $cards.innerHTML = productos
     .map(
@@ -40,6 +41,7 @@ const crearCards = (productos) => {
     )
     .join("");
 };
+*/
 
 const crearCategorias = (array) => {
   const categoriasUnicas = [
@@ -143,6 +145,9 @@ $clearCartBtn.addEventListener("click", () => {
   cart.updateCartUI();
 });
 
-crearCards(productos);
+//crearCards(productos);
 const categorias = crearCategorias(productos);
 crearCheckbox(categorias);
+
+///////////////////////////////////
+

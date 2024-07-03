@@ -75,7 +75,7 @@
 
 /* lista de productos */
 
-.todos-los-productos {
+#cuatroProductos {
     margin-top: 30px;
     display: flex;
     align-items: center;
