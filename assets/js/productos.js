@@ -133,6 +133,24 @@ document.addEventListener("click", (event) => {
     cart.updateCartUI();
     cart.mostrarNotificacion();
   }
+
+  if (event.target.closest(".increase-item")) {
+    const btn = event.target.closest(".increase-item");
+    const id = Number(btn.dataset.id);
+    cart.increaseItem(id);
+  }
+
+  if (event.target.closest(".decrease-item")) {
+    const btn = event.target.closest(".decrease-item");
+    const id = Number(btn.dataset.id);
+    cart.decreaseItem(id);
+  }
+
+  if (event.target.closest(".remove-item")) {
+    const btn = event.target.closest(".remove-item");
+    const id = Number(btn.dataset.id);
+    cart.removeItem(id);
+  }
 });
 
 $checkboxes.addEventListener("change", filterAndRender);

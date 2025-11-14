@@ -127,12 +127,46 @@ export class ShoppingCart {
           <span class="product-count" id=product-count-for-id${producto.id}>${currentProductCount} x </span>${producto.titulo}
         </p>
           <p>$${producto.precio}</p>
+          <div class="d-flex gap-1 mt-2">
+            <button type="button" class="btn btn-sm btn-success increase-item w-25" data-id="${producto.id}">+</button>
+            <button type="button" class="btn btn-sm btn-warning text-white decrease-item w-25" data-id="${producto.id}">-</button>
+            <button type="button" class="btn btn-sm btn-danger remove-item w-50" data-id="${producto.id}">Eliminar</button>
+          </div>
       </li>
       `;
     }
 
     $totalNumberOfItems.textContent = this.getCounts();
     this.calculateTotal();
+  }
+
+  // Método para incrementar en 1 la cantidad de un producto en el carrito
+  increaseItem(id) {
+    const producto = productos.find((item) => item.id === id);
+    if (!producto) return;
+
+    this.items.push(producto);
+    this.saveCart();
+    this.updateCartUI();
+  }
+
+  // Método para disminuir en 1 la cantidad de un producto en el carrito
+  decreaseItem(id) {
+    const index = this.items.findIndex((item) => item.id === id);
+    if (index === -1) return;
+
+    this.items.splice(index, 1);
+    this.saveCart();
+    this.updateCartUI();
+  }
+
+  // Método para eliminar por completo un producto del carrito
+  removeItem(id) {
+    if (!this.items.length) return;
+
+    this.items = this.items.filter((item) => item.id !== id);
+    this.saveCart();
+    this.updateCartUI();
   }
 
   // Método para mostrar notificaciones al agregar un producto al carrito
