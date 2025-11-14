@@ -13,7 +13,7 @@ main {
     display: flex;
     width: 500px;
     background-color: var(--bs-tertiary-bg);
-    border-radius: 20px;
+    border-radius: 1.25rem;
     margin-top: 1rem;
     box-shadow: var(--bs-box-shadow-sm);
 
@@ -53,7 +53,7 @@ form {
 }
 
 .form-contenedor-externo h2 {
-    font-size: 37px;
+    font-size: 1.9rem;
     text-align: center;
     margin-top: 3rem;
 }
@@ -66,7 +66,7 @@ form {
 }
 
 .form-contenedor-interno {
-    padding-top: 2.3rem;
+    padding-top: 0.5rem;
 }
 
 .formu-input {
@@ -75,8 +75,7 @@ form {
     padding: 10px;
     margin: 10px;
     background: transparent;
-    border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 0.75rem;
 }
 
 .formu-input input::placeholder {
@@ -86,25 +85,20 @@ form {
 .olvido-contrasena {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 0.9rem;
     margin-top: 0;
     margin-bottom: 2rem;
 }
 
-.olvido-contrasena a {}
-
-.registro-link a {}
-
 .registro-link {
-    margin: 2rem;
+    margin: 0.75rem;
 }
 
 .login-button {
     cursor: pointer;
-    border-radius: 20px;
-    font-size: 1.2rem;
+    border-radius: 999px;
+    font-size: 1rem;
     width: 40%;
     padding: 10px;
     margin: 10px;
-    border-radius: 10px;
 }

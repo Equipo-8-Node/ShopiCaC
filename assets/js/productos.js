@@ -17,7 +17,7 @@ const crearCards = (productos) => {
         <section class="card hover">
           <img
             src="${producto.imagen}"
-            class="card-img-top h-50"
+            class="card-img-top h-50 w-75 m-auto mt-2"
             alt="${producto.titulo} image"
           >
           <div class="card-body d-flex flex-column justify-content-between p-2">
